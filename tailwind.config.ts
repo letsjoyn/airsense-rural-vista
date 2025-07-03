@@ -21,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				inter: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -98,12 +99,29 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'pulse-ring': {
+					'0%': { 
+						boxShadow: '0 0 0 0 rgba(14, 165, 233, 0.7)'
+					},
+					'70%': { 
+						boxShadow: '0 0 0 10px rgba(14, 165, 233, 0)'
+					},
+					'100%': { 
+						boxShadow: '0 0 0 0 rgba(14, 165, 233, 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.3s ease-out'
+				'fade-in': 'fade-in 0.3s ease-out',
+				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
+				'pulse-ring': 'pulse-ring 2s infinite'
 			}
 		}
 	},

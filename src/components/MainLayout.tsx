@@ -11,7 +11,7 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children, onLogout }: MainLayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-indigo-950 dark:to-purple-950">
+    <div className="min-h-screen flex flex-col bg-premium-gradient text-foreground">
       <Navbar onLogout={onLogout} />
       <main className="flex-1">
         {children}
