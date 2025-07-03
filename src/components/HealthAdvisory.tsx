@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Heart, Mask, School, Home, Activity } from "lucide-react";
+import { AlertTriangle, Heart, Shield, School, Home, Activity } from "lucide-react";
 
 interface HealthAdvisoryProps {
   currentAQI: number;
@@ -75,7 +75,7 @@ const HealthAdvisory = ({ currentAQI, currentLevel }: HealthAdvisoryProps) => {
   const recommendationCards = [
     {
       title: "Wear Mask",
-      icon: <Mask className="h-8 w-8" />,
+      icon: <Shield className="h-8 w-8" />,
       description: currentAQI > 100 ? "N95 mask recommended outdoors" : "Mask not necessary",
       recommended: currentAQI > 100,
       urgency: currentAQI > 200 ? "high" : currentAQI > 100 ? "medium" : "low"
