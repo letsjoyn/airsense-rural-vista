@@ -148,6 +148,11 @@
   to { width: 100%; }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .animate-bounce-gentle {
   animation: bounce-gentle 2s ease-in-out infinite;
 }
@@ -158,6 +163,10 @@
 
 .animate-typing {
   animation: typing 2s steps(40, end);
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
 }
 
 /* Custom scrollbar for premium feel */
